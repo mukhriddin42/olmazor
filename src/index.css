@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+.main-shadow {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@theme: {
+    extend: {
+        screens: {
+            '1sm': '320px', // Juda katta ekranlar uchun
+            '2sm': '425px'
+        }
+    }
+}
+
+.product-card {
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.shopw-now-button {
+    transition: all .5s;
+}
+.product-name {
+    transition: all .5s;
+}
+
+.product-card:hover .product-name {
+    color: white;
+}
+
+.product-card:hover .shopw-now-button {
+    color: white;
+    border-color: white;
+}
+
+.shopw-now-button:hover {
+    scale: 1.05;
+}
