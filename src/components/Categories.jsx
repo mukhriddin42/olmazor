@@ -19,11 +19,15 @@ const Categories = () => {
     queryFn: fetchProducts,
   })
 
+
   if (isLoading) return <h1>Loading ... </h1>
   if (isError) return <h1>Xatolik keldi: {isError.message}</h1>
   console.log(data.products)
+  const uniqueCategories = [...new Set(data.products.map(item => item.category)), 'airpods', 'powerbanks', 'headphones', 'Noutbooks', 'Keyboards', 'headphones', 'headphones', 'airpods']
 
-  const groupedData = chunkArray(data.products, 6)
+  console.log(uniqueCategories)
+
+  const groupedData = chunkArray(uniqueCategories, 5)
 
   return (
     <div className='px-24 mt-16'>
@@ -37,11 +41,11 @@ const Categories = () => {
 
       <Carousel ref={carouselRef} autoplaySpeed={2000} infinite={false}>
         {groupedData.map((group, idx) => (
-          <div key={idx} className='my-6 !flex justify-between'>
+          <div key={idx} className='my-6 !flex gap-6 min-w-[20em] justify-between'>
             {group.map((category) => (
-              <div key={category.id} className='flex flex-col items-center bg-[#EDEDED] py-8 px-12 rounded-md cursor-pointer hover:bg-[#c9c7c7]'>
+              <div key={category} className='flex flex-col items-center bg-[#EDEDED] py-8 px-12 rounded-md cursor-pointer hover:bg-[#c9c7c7]'>
                 <PhoneAndroidOutlined style={{ fontSize: '2.3em' }} />
-                <p className='text-xl'>{category.category}</p>
+                <p className='text-xl'>{category}</p>
               </div>
             ))}
           </div>

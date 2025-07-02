@@ -43,133 +43,36 @@ const ProductsList = () => {
                 </TabPanel>
                 <TabPanel value={1}>
                     <div className=" flex gap-6 justify-self-start  flex-wrap">
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productCameraImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-
+                        {data.products.map((product) => (
+                            <div key={product.id} className="main-shadow cursor-pointer rounded-md flex flex-col items-center py-4 px-6">
+                                <div className="h-[18em]">
+                                    <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
+                                    <img className="w-[9em] mt-2" src={product.images[0]} alt="" />
+                                    <p className="w-[11em] font-semibold text-center mt-2">{product.title}</p>
+                                    <h3 className="font-bold text-2xl text-center my-2">${product.price}</h3>
+                                </div>
+                                <Button size="md" variant={'solid'} color="primary">
+                                    Buy now
+                                </Button>
+                            </div>
+                        ))}
                     </div>
                 </TabPanel>
                 <TabPanel value={2}>
                     <div className=" flex gap-6 justify-self-start  flex-wrap">
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productPhoneImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productPhoneImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productPhoneImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productPhoneImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
-                        <div className="border rounded-md flex flex-col items-center py-4 px-6">
-                            <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
-                            <img className="w-[9em] mt-2" src={productPhoneImg} alt="" />
-                            <p className="w-[11em] font-semibold text-center mt-2">Apple iPhone 14 Pro Max 128GB Deep Purple </p>
-                            <h3 className="font-bold text-2xl text-center my-2">$900</h3>
-                            <Button size="md" variant={'solid'} color="primary">
-                                Primary
-                            </Button>
-                        </div>
-
+                        {data.products.map((product) => (
+                            <div key={product.id} className="main-shadow cursor-pointer rounded-md flex flex-col items-center py-4 px-6">
+                                <div className="h-[18em]">
+                                    <FavoriteBorderOutlined style={{ cursor: 'pointer' }} />
+                                    <img className="w-[9em] mt-2" src={product.images[0]} alt="" />
+                                    <p className="w-[11em] font-semibold text-center mt-2">{product.title}</p>
+                                    <h3 className="font-bold text-2xl text-center my-2">${product.price}</h3>
+                                </div>
+                                <Button size="md" variant={'solid'} color="primary">
+                                    Buy now
+                                </Button>
+                            </div>
+                        ))}
                     </div>
                 </TabPanel>
             </Tabs>
